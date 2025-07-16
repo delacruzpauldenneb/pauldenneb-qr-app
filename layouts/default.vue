@@ -106,12 +106,7 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Sign in',
-          to: '/signin'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
+          title: 'Sign In',
           to: '/inspire'
         }
 
