@@ -52,7 +52,7 @@ export default {
     strategies: {
       google: {
         clientId:
-          "376839770668-4p4ok013pn4j2nuveh8r9buvvth2ikg4.apps.googleusercontent.com",
+          process.env.GOOGLE_CLIENT_ID || "376839770668-4p4ok013pn4j2nuveh8r9buvvth2ikg4.apps.googleusercontent.com",
         scheme: "oauth2",
         endpoints: {
           authorization: "https://accounts.google.com/o/oauth2/auth",
@@ -65,7 +65,7 @@ export default {
         },
         responseType: "token id_token",
         scope: ["openid", "profile", "email"],
-        redirectUri: "http://localhost:3000/auth/callback",
+        redirectUri: process.env.GOOGLE_REDIRECT_URI || "http://localhost:3000/auth/callback",
         codeChallengeMethod: "",
       },
 
@@ -76,10 +76,10 @@ export default {
           token: "https://discord.com/api/oauth2/token",
           userInfo: "https://discord.com/api/users/@me",
         },
-        clientId: "1399295131282051134",
-        clientSecret: "O_bWWlodY9-aIcOgLIbDPYBelC9IaUE7",
+        clientId: process.env.DISCORD_CLIENT_ID || "1399295131282051134",
+        clientSecret: process.env.DISCORD_CLIENT_SECRET || "O_bWWlodY9-aIcOgLIbDPYBelC9IaUE7",
         scope: ["identify", "email"],
-        redirectUri: "http://localhost:3000/auth/callback",
+        redirectUri: process.env.DISCORD_REDIRECT_URI || "http://localhost:3000/auth/callback",
       },
     },
   },
