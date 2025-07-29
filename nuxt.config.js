@@ -6,8 +6,8 @@ export default {
 
   // Global page headers
   head: {
-    titleTemplate: "%s - project-plugin",
-    title: "project-plugin",
+    titleTemplate: "%s - qr-scanner",
+    title: "qr-scanner",
     htmlAttrs: {
       lang: "en",
     },
@@ -52,7 +52,7 @@ export default {
     strategies: {
       google: {
         clientId:
-          process.env.GOOGLE_CLIENT_ID || "376839770668-4p4ok013pn4j2nuveh8r9buvvth2ikg4.apps.googleusercontent.com",
+          process.env.GOOGLE_CLIENT_ID || "893281478245-kem17vvqs2m62o7juih9et16lmrmh2qq.apps.googleusercontent.com",
         scheme: "oauth2",
         endpoints: {
           authorization: "https://accounts.google.com/o/oauth2/auth",
@@ -69,18 +69,6 @@ export default {
         codeChallengeMethod: "",
       },
 
-      discord: {
-        scheme: "oauth2",
-        endpoints: {
-          authorization: "https://discord.com/api/oauth2/authorize",
-          token: "https://discord.com/api/oauth2/token",
-          userInfo: "https://discord.com/api/users/@me",
-        },
-        clientId: process.env.DISCORD_CLIENT_ID || "1399295131282051134",
-        clientSecret: process.env.DISCORD_CLIENT_SECRET || "O_bWWlodY9-aIcOgLIbDPYBelC9IaUE7",
-        scope: ["identify", "email"],
-        redirectUri: process.env.DISCORD_REDIRECT_URI || "http://localhost:3000/auth/callback",
-      },
     },
   },
 

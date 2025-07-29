@@ -111,8 +111,8 @@ export default {
         },
          {
           icon: 'mdi-chart-bubble',
-          title: 'Gesture',
-          to: '/gestureplug'
+          title: 'QR',
+          to: '/qrscanner'
         }
 
       ],
